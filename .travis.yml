@@ -1,10 +1,17 @@
-language: node_js
-node_js:
-  - 10
+dist: trusty
+sudo: false
+language: csharp
+mono: none
+dotnet: 1.0.1
+install:
+  - dotnet restore
+  - nvm install 10.16.3
+  - nvm use 10.16.3
+  - npm install
 
 before_install:
 - npm install nerdbank-gitversioning
 - node --version
 - node getVersion.js
 - export SEMVER=$(node getVersion.js)
-- echo $SEMVER
+- echo $SEMV

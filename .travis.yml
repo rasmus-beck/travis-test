@@ -8,6 +8,9 @@ sudo: required
 language: csharp
 mono: none
 
+before-install:
+  - git fetch --unshallow
+
 install:
   - nvm install 10.16.3
   - nvm use 10.16.3
